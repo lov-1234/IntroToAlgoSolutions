@@ -25,3 +25,5 @@ Chapter 2:
         Solved: [25-01-2021](https://github.com/lov-1234)
     2.1-3:
         Solved: [25-01-2021](https://github.com/lov-1234)
+    2.1-4:
+        Solved: [25-01-2021](https://github.com/lov-1234)
