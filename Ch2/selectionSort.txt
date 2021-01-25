@@ -1,0 +1,18 @@
+This file contains the answer to question 2.2-2. This is only a partial answer.
+
+Loop Invariant and Analysis done in a notebook.
+
+Selection-Sort(A):
+    for i = 1 to A.length - 1:
+        smallestNum = A[i]
+        smallestIndex = i
+        for j = i + 1 to A.length:
+            if A[j] < smallestNum:
+                smallestNum = A[j]
+                smallestIndex = j
+        temp = A[i]
+        A[i] = smallestNum
+        A[smallestIndex] = temp
+
+Analysis:
+This algorithm runs in Theta(n^2) time in both best and worst-case.
