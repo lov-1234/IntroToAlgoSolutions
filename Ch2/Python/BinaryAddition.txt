@@ -1,0 +1,55 @@
+This file contains the solution to the exercise 2.1-4:
+
+Constraints:
+    1) We're given 2 n-element array.
+    2) Sum should be stored in an n+1-element array.
+
+Pre-requisite Knowledge:
+    1) We must know the bit-manipulation by the following gates:
+        a) XOR
+        b) OR
+        c) AND
+    2) Functioning of a Ripple-Carry-Adder
+
+XOR Execution:
+
+    A | B | C
+    1 | 1 | 0
+    0 | 1 | 1
+    1 | 0 | 1
+    0 | 0 | 0
+
+    Where A and B are input signals and C is the output signal.
+
+AND Execution:
+
+    A | B | C
+    1 | 1 | 1
+    0 | 1 | 0
+    1 | 0 | 0
+    0 | 0 | 0
+
+    Where A and B are input signals and C is the output signal.
+
+OR Execution:
+
+    A | B | C
+    1 | 1 | 1
+    0 | 1 | 1
+    1 | 0 | 1
+    0 | 0 | 0
+
+    Where A and B are input signals and C is the output signal.
+
+
+For the Purpose of this exercise, let there be some other helper functions which simulate the 
+gate behaviour above, namely, XOR, AND, and OR.
+
+Binary-Addition(A, B):
+    C = new Array[A.length + 1]         // Initialisation of a new Array of size 1 greater than the length of A or B.
+    carryDigit = 0                      // Carry, which would be used for the addition of binary-digits
+    for i = 1 to A.length:              // We can use B.length as well, it won't make a difference
+        C[i] = XOR(XOR(A[i], B[i]), carryDigit)
+        carryDigit = OR(OR(AND(A[i], B[i]), AND(A[i], carryDigit)), AND(B[i], carryDigit))
+    C[i] = carryDigit
+    return C
