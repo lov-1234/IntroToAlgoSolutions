@@ -23,3 +23,5 @@ You might want to create a pull request after that, so that I can see the change
 Chapter 2:
     2.1-2:
         Solved: [25-01-2021](https://github.com/lov-1234)
+    2.1-3:
+        Solved: [25-01-2021](https://github.com/lov-1234)
