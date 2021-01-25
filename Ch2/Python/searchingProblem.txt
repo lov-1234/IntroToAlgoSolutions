@@ -1,0 +1,30 @@
+Pseudocode Implementation of Searching Problem, that is, Question 2.1-3:
+
+Linear-Search(A,v):
+	for i = 1 to A.length:
+		if A[i] == v:
+			return i
+	return NIL
+
+
+Proving the Correctness of the Algorithm using a Loop Invariant:
+
+Initialisation:
+	'i' is currently 1, so trivially, no preceding elements have matched with v. So,
+	the invariant holds.
+
+Maintenance:
+	'i' would return if A[i] == v. However, it did not return in this iteration, therefore,
+	the condition must be false, and no match occurred. Trivially, it would also return if it
+	found a match for the previous 'i - 1' conditions, but it didn't return, and no match was
+	found therefore, the invariant still holds.
+
+Termination:
+	There are two cases for termination:
+		1) Either i becomes larger than the length of A. And therefore, the loop
+		   condition evaluates to false and then NIL is returned as no match is found for
+		   the n elements in the array.
+		2) Or i is in the range if 1 and A.length and we found a matching value, due to 
+		   which the resulting value of 'i' is returned which is correct.
+
+These are the only conditions in which our loop terminates.

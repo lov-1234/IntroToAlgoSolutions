@@ -16,7 +16,7 @@ class InsertionSort:
                 arr[j + 1] = key
                 i += 1
     
-    def insertionSortNonDecreasing(self, arr):
+    def insertionSortNonDecreasing(self, arr):      # Answer to question 2.1-2
         if len(arr) <= 1:
             return arr
         else:
