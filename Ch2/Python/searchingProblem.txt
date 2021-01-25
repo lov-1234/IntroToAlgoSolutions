@@ -7,6 +7,7 @@ Linear-Search(A,v):
 	return NIL
 
 
+Time-Complexity: O(n)
 Proving the Correctness of the Algorithm using a Loop Invariant:
 
 Initialisation:
